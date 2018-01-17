@@ -32,7 +32,22 @@ namespace Generators
         int w,h;
         int r, g, b;
         Random rnd = new Random();
-        private void pictureBox1_Clickll(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            nnn = new Noiz(rnd.Next(99));
+            nn = new Noiz(rnd.Next(99));
+            int chooser = rnd.Next(5);
+            switch (chooser)
+            {
+                case 0: pictureBox1_Click1(sender, e); break;
+                case 1: pictureBox1_Click2(sender, e); break;
+                case 2: pictureBox1_Click3(sender, e); break;
+                case 3: pictureBox1_Click4(sender, e); break;
+                case 4: pictureBox1_ClickXX(sender, e); break;
+
+            }
+            }
+        private void pictureBox1_ClickXX(object sender, EventArgs e)
         {
             nnn = new Noiz(rnd.Next() % 99);
             nnnn = new Noiz(rnd.Next() % 99);
@@ -119,7 +134,7 @@ namespace Generators
             pictureBox1.Image = bitmap;
             bitmap.Save("bity.jpg");
         }
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pictureBox1_Click4(object sender, EventArgs e)
         {
             nnn = new Noiz(rnd.Next() % 88 +11);
             nnnn = new Noiz(rnd.Next() % 88 + 11);
